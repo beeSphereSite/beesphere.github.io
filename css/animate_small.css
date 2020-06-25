@@ -1,0 +1,448 @@
+.wcloudwrds{
+  position: absolute;
+  color: #fff;
+  }
+  
+  .finalword{
+  font-size: 2.9rem;
+  cursor: default;
+  position: absolute;
+  top: -7rem;
+  left: 5rem;
+  color: #fff;
+  letter-spacing: 2px;
+  text-align: center;
+  opacity:0;
+  font-weight: 550;
+  
+  -webkit-animation: showalways 2s linear 7s;
+    animation: showalways 2s linear 7s;
+    animation-fill-mode: forwards;
+  }
+  @keyframes showalways {
+    100% {opacity: 1;}
+  }
+  
+  .finalword .bee-orangecolor{
+  color: #e9ad22;
+  transition: all 1s;
+  
+  
+  }
+  
+  .finalword .bee-bluecolor{
+  color: #007399;
+  transition: all 1s;
+  
+  
+  }
+  
+  div.borderXwidth span:before
+  {
+      position: absolute;
+      height: 2.5px;
+      content: '';
+      background: #e9ad22;
+      transition: all 0.3s;
+      width: 31%;
+      left: 3px;
+      top: 7px;
+      
+  
+  }
+  div.borderXwidth span:after
+  {
+      position: absolute;
+      height: 2.5px;
+      content: '';
+      background: #007399;
+      transition: all 0.3s;
+      width: 65%;
+      right: 0px;
+      bottom: 0px;
+      
+      
+  }
+  
+  div.borderXwidth:hover span:before
+  { 
+  width: 0%;
+  }
+  
+   div.borderXwidth:hover span:after
+  {
+  width: 0%;
+  
+  }
+  
+.bee1 {
+  -webkit-animation-name: bounceInLeft, h1;
+  -webkit-animation-duration: 4s,1s;
+  -webkit-animation-delay: 0s,5s;
+  animation-name: bounceInLeft, h1;
+  animation-duration: 4s,1s;
+  animation-delay: 0s,5s;
+  left: 0rem;
+  font-size: 2rem;
+  top: -5rem;
+  animation-fill-mode: forwards;
+}
+
+@keyframes h1 {
+  100% {left:5rem; top:-7rem;font-size: 2.9rem;}
+}
+      
+.bee2 {
+  -webkit-animation-name: fadeInDown, p;
+  -webkit-animation-duration: 4s,1s;
+  -webkit-animation-delay: 0s,5s;
+  animation-name: fadeInDown, p;
+  animation-duration: 4s,1s;
+  animation-delay: 0s,5s;
+  left: -0.5rem;
+  top: -3rem;
+  font-size: 1.8rem;
+  animation-fill-mode: forwards;
+}
+
+@keyframes p {
+  100% {left:5rem; top:-7rem;font-size: 2.9rem;}
+}
+      
+.bee3 {
+  -webkit-animation-name: bounceInRight, h2;
+  -webkit-animation-duration: 4s,1s;
+  -webkit-animation-delay: 0s,5s;
+  animation-name: bounceInRight, h2;
+  animation-duration: 4s,1s;
+  animation-delay: 0s,5s;
+  font-size: 1.5rem;
+  left: 1.5rem;
+  top: -1.2rem;
+  animation-fill-mode: forwards;
+}
+      
+@keyframes h2 {
+  100% {left:3.1rem;top:-7rem;font-size: 2.9rem;}
+}
+      
+.bee4 {
+  -webkit-animation-name: bounceInUp, h3;
+  -webkit-animation-duration: 4s,1s;
+  -webkit-animation-delay: 0s,5s;
+  animation-name: bounceInUp, h3;
+  animation-duration: 4s,1s;
+  animation-delay: 0s,5s;
+  font-size: 2.2rem;
+  left: 7.4rem;
+  top: -7.9rem;
+  animation-fill-mode: forwards;
+}
+      
+@keyframes h3 {
+  100% {left:10.3rem; top:-7rem;font-size: 2.9rem;}
+}
+      
+.bee5 {
+  -webkit-animation-name: fadeInLeft, h4;
+  -webkit-animation-duration: 4s,1s;
+  -webkit-animation-delay: 0s,5s;
+  animation-name: fadeInLeft, h4;
+  animation-duration: 4s,1s;
+  animation-delay: 0s,5s;
+  font-size: 1.7rem;
+  left: 8.5rem;
+  top: -5.5rem;
+  animation-fill-mode: forwards;
+}
+      
+@keyframes h4 {
+  100% {left:12.5rem; top:-7rem;font-size: 2.9rem;}
+}
+
+.bee6 {
+  -webkit-animation-name: slideInDown, h5;
+  -webkit-animation-duration: 4s,1s;
+  -webkit-animation-delay: 0s,5s;
+  animation-name: slideInDown, h5;
+  animation-duration: 4s,1s;
+  animation-delay: 0s,5s;
+  font-size: 2rem;
+  left: 10.5rem;
+  top: -9.5rem;
+  animation-fill-mode: forwards;
+}
+      
+@keyframes h5 {
+  100% {left:3.5rem; top:-7rem;font-size: 2.9rem;}
+}
+      
+.bee7 {
+  -webkit-animation-name: fadeInUp ,h6;
+  -webkit-animation-duration: 4s,1s;
+  -webkit-animation-delay: 0s,5s;
+  animation-name: fadeInUp ,h6;
+  animation-duration: 4s,1s;
+  animation-delay: 0s,5s;
+  font-size: 2.3rem;
+  left: 2rem;
+  top: -10.2rem;
+  animation-fill-mode: forwards;
+}
+      
+@keyframes h6 {
+  100% {left:13rem; top:-7rem;font-size: 2.9rem;}
+}
+      
+.bee8 {
+  -webkit-animation-name:slideInUp,h7;
+  -webkit-animation-duration: 4s,1s;
+  -webkit-animation-delay: 0s,5s;
+  animation-name: slideInUp,h7;
+  animation-duration: 4s,1s;
+  animation-delay: 0s,5s;
+  left: 0.8rem;
+  top: -7rem;
+  font-size: 2.1rem;
+  animation-fill-mode: forwards;
+}
+      
+@keyframes h7 {
+  100% {left:13.9rem; top:-7rem;font-size: 2.9rem;}
+}
+      
+.bee9 {
+  -webkit-animation-name: bounceInDown,h8;
+  -webkit-animation-duration: 4s,1s;
+  -webkit-animation-delay: 0s,5s;
+  animation-name: bounceInDown,h8;
+  animation-duration: 4s,1s;
+  animation-delay: 0s,5s;
+  font-size: 2.5rem;
+  left: 8.5rem;
+  top: -4rem;
+  animation-fill-mode: forwards;
+}
+      
+@keyframes h8 {
+  100% {left:12.6rem; top:-7rem;font-size: 2.9rem;}
+}
+      
+.bee10 {
+  -webkit-animation-name: fadeInRight;
+  -webkit-animation-duration: 4s;
+  -webkit-animation-delay: 0s;
+  animation-name: fadeInRight;
+  animation-duration: 4s;
+  animation-delay: 0s;
+  left: 10.8rem;
+  top: -12.7rem;
+  font-size: 3rem; 
+}
+
+.bee11 {
+  -webkit-animation-name: bounceInRight;
+  -webkit-animation-duration: 4s;
+  -webkit-animation-delay: 0s;
+  animation-name: bounceInRight;
+  animation-duration: 4s;
+  animation-delay: 0s;
+  left: 5.8rem;
+  top: -1.8rem;
+  font-size: 2.5rem;
+}
+          
+.bee12 {
+  -webkit-animation-name: bounceInDown;
+  -webkit-animation-duration: 4s;
+  -webkit-animation-delay: 0s;
+  animation-name: bounceInDown;
+  animation-duration: 4s;
+  animation-delay: 0s;
+  left: 4.5rem;
+  top: 0.5rem;
+  font-size: 2.3rem;
+}
+          
+.bee13 {
+  display: none;
+}
+          
+.bee14 {
+  -webkit-animation-name: fadeInLeft;
+  -webkit-animation-duration: 4s;
+  -webkit-animation-delay: 0s;
+  animation-name: fadeInLeft;
+  animation-duration: 4s;
+  animation-delay: 0s;
+  left: 15.4rem;
+  top: -6.2rem;
+  font-size: 1.5rem;
+}
+          
+.bee15 {
+  display: none;
+} 
+          
+.bee16 {
+  -webkit-animation-name: fadeInDown;
+  -webkit-animation-duration: 4s;
+  -webkit-animation-delay: 0s;
+  animation-name: fadeInDown;
+  animation-duration: 4s;
+  animation-delay: 0s;
+  left: 15.8rem;
+  top: -4.5rem;
+  font-size: 2.5rem;
+}
+          
+.bee17 {
+  -webkit-animation-name: zoomInRight;
+  -webkit-animation-duration: 4s;
+  -webkit-animation-delay: 0s;
+  animation-name: zoomInRight;
+  animation-duration: 4s;
+  animation-delay: 0s;
+  left: 11.8rem;
+  top: 1.3rem;
+  font-size: 2rem;
+}
+          
+.bee18 {
+  display: none;
+} 
+          
+.bee19 {
+ display: none;
+} 
+          
+.bee20 {
+  -webkit-animation-name: fadeInLeftBig;
+  -webkit-animation-duration: 4s;
+  -webkit-animation-delay: 0s;
+  animation-name: fadeInLeftBig;
+  animation-duration: 4s;
+  animation-delay: 0s;
+  left: 2rem;
+  top: -12.5rem;
+  font-size: 1.8rem;
+}
+          
+.bee21 {
+  display: none;
+}
+          
+.bee22 {
+	display: none;
+}
+          
+.bee23 {
+  display: none;
+}      
+
+.bee24 {
+  display: none;
+}      
+
+.bee25 {
+  display: none;
+}  
+  
+span.wrd1 {
+  -webkit-animation-name: abc;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-delay: 4s;
+  animation-name: abc;
+  animation-duration: 2s;
+  animation-delay: 3s;
+  animation-fill-mode: forwards;
+}
+    
+@keyframes abc {
+  25% {
+    color: #5d4409;
+    font-weight: 550;  
+  }
+  50% {
+    color: #a27710;
+    font-weight: 600;  
+  }
+  75% {
+    color: #d19815;
+    font-weight: 650;
+  }
+  100% {
+    color: #e9ad22;
+    font-weight: 700;
+  }
+}
+span.offText{
+  animation-duration: 2s;
+  animation-delay: 4s;
+  animation-name: opacityOff;
+  animation-fill-mode: forwards;
+}
+      
+@keyframes opacityOff {
+  0% {
+    opacity: 1;
+    filter: blur(0rem);
+  }
+  25% {
+    opacity: 0.7;
+    filter: blur(0.1rem);
+}
+  50% {
+    opacity: 0.5;
+    filter: blur(0.2rem);
+  }
+  75% {
+    opacity: 0.1;
+    filter: blur(0.4rem);
+  }
+  100% {
+    opacity: 0;
+    filter: blur(0rem);
+    top: 0rem;
+  }
+}
+
+span.wrd2 {
+  -webkit-animation-name: xyz;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-delay: 3s;
+  animation-name: xyz;
+  animation-duration: 2s;
+  animation-delay: 3s;
+  animation-fill-mode: forwards;
+}
+      
+@keyframes xyz {
+  25% {
+    color: #33ccff;
+    font-weight: 550;
+  }
+  50% {
+    color: #00bfff;
+    font-weight: 600;
+  }
+  75% {
+    color: #0099cc;
+    font-weight: 650;
+  }
+  100% {
+    color: #007399;
+    font-weight: 700;
+  }
+}
+
+.wcloud{
+  -moz-animation: disappear 2s linear 9s;
+  -webkit-animation: disappear 2s linear 9s;
+  animation: disappear 2s linear 9s;
+  animation-fill-mode: forwards;
+}
+        
+@keyframes disappear {
+  100% {opacity:0;}
+}

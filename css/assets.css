@@ -1,0 +1,78 @@
+.assets{
+	overflow: hidden;
+
+}
+.assets .kwicks.kwicks-horizontal.kwicks-collapsed li{
+	width: 20%;
+	cursor: pointer;
+}
+.assets ul {
+overflow: hidden;
+}
+.assets h2,.assets p{color: #fff;}
+
+
+            #ods { background-image: linear-gradient(to left, #83c9a9 , #367c5d); }
+            #qch { background-image: linear-gradient(to right, #8a94c1, #465286); }
+            #din { background-image: linear-gradient(to left, #cd7e82, #a54045); }
+            #dag { background-image: linear-gradient(to right, #c182c9, #9745a1); }
+            #ast { background-image: linear-gradient(to left , #efc35d, #e8a917); }
+
+			
+			
+.assets li {
+	float: left;
+	height: 550px;
+}
+
+.assets li .inner {
+	padding: 50px 50px 50px 50px; 
+	overflow: hidden;
+}
+.kwicks.kwicks-horizontal li span.header{
+	width: 30px;
+	padding-left: 2px;
+	display: inline-block;	
+	margin-left: auto;
+	margin-right: auto;
+	height: 100%;
+	cursor: pointer;
+}
+
+.kwicks.kwicks-horizontal li.kwicks-collapsed span.header .bkmark{
+	width: 100%;
+	border-left: 15px solid red;
+	border-right: 15px solid red;
+	border-bottom: 15px solid transparent;
+	height: 30%;
+	cursor: pointer;
+	transition: all 0.3s;
+}
+
+
+
+.kwicks.kwicks-horizontal li.kwicks-expanded span.header .bkmark{
+	width: 100%;
+	border-left: 15px solid blue;
+	border-right: 15px solid blue;
+	border-bottom: 15px solid transparent;
+	z-index:999;
+	height: 5%;
+	cursor: pointer;
+	transition: all 0.3s;
+}
+
+
+.assets li .inner {
+	width: 87%; 
+	padding: 50px 50px 50px 10px; 
+	overflow: hidden;
+	float:right;
+}
+
+.inner img {
+
+	width: 100%;
+	margin-top: 15%;
+}
+
