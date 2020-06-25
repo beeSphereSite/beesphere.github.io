@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="en-US"><!--<![endif]--><head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="description" content="beeSphere - Agility with stability">
+	<meta name="keywords" content="beeSphere, creative, html">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>beeSphere - Agility with stability</title>
+	<!-- Favicon -->
+	<link href="img/favicon.ico" rel="shortcut icon"/>
+    <!-- Place favicon.ico in the root directory -->
+    <!-- CSS here -->
+    <link rel="stylesheet" href="css/style.css"/>
+	<link rel="stylesheet" href="css/animate_full.css"/>
+	<link rel="stylesheet" href="css/acstyle.css"/>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" integrity="sha256-rByPlHULObEjJ6XQxW/flG2r+22R5dKiAoef+aXWfik=" crossorigin="anonymous" />
+<link rel="stylesheet" href="./css/ui.slider.extras.css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script type="text/javascript" src="./js/selectToUISlider.jQuery.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" integrity="sha256-KM512VNnjElC30ehFwehXjx1YCHPiQkOPmqnrWtpccM=" crossorigin="anonymous"></script>
+<style type="text/css">
+.slider{
+margin-top: 2rem;
+}
+.answers{
+text-align: center;
+}
+.input-group.slider{
+margin-left: auto;
+margin-right: auto;
+width: 10% !important;
+}
+.ui-widget-content{
+border: 1px solid #ccc !important;
+background: #ccc;
+height: 0.4rem;
+}
+.ui-widget-header{
+border: 1px solid #007399 !important;
+background: #007399;
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active{
+border: 1px solid #007399 !important;
+background: #007399;
+width: 2rem !important;
+height: 2rem !important;
+border-radius: 2rem;
+cursor: e-resize !important;
+}
+.ui-slider-horizontal .ui-slider-handle{
+top: -0.8rem;
+}
+
+.question{
+margin: 2rem;
+}
+ol.ui-slider-scale{
+
+cursor: pointer;
+}
+#sliderSelect{
+
+display: none;
+}
+.question.select{
+padding-top: 2rem;
+padding-bottom: 2rem;
+}
+.question.select .answers{
+padding-top: 2rem;
+padding-bottom: 2rem;
+}
+.input-group.sliderRange{
+margin-left: auto;
+margin-right: auto;
+width: 20% !important;
+}
+
+.mt {
+
+  margin-top: 6%;
+}
+
+</style>
+
+</head>
+
+<body>
+    <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please upgrade your browser to improve your experience and security.</p>
+        <![endif]-->
+
+    <!-- logo-header-start -->
+    <header class="logo-header">
+			<div class="container-fluid ">
+				<div class="row">
+						<div class="logo col-12 col-sm-12 col-md-12 col-lg-6 justify-content-start align-items-start">
+							<a href="index.html">
+								<img src="img/logo.png" alt="Logo">
+							</a>
+						</div><!-- logo end -->
+						<div class="col-lg-6 d-none d-sm-none d-md-none d-lg-flex align-items-end">
+						<!-- border_area_start -->
+							<div class="shape_menu">
+								<div class="shape_border_Main"></div>
+							</div>
+						<!-- border_area_end -->
+						</div><!-- logo end -->
+
+				</div><!-- Row end -->
+			</div><!-- Container end -->
+	</header>
+<!-- logo-header-end -->
+<div class="container">
+<form class="form-group">
+      <div class="row align-items-center justify-items-center">
+
+  <script>
+  $( function() {
+    $( "#slider-range-number" ).slider({
+      range: "min",
+      min: 0,
+      max: 100,
+	  value: 1,
+	  step: 1,
+      slide: function( event, ui ) {
+        $( "#sliderNum" ).val( ui.value );
+      }
+    });
+    $( "#sliderNum" ).val( $( "#slider-range-number" ).slider( "value" ) );
+	
+	    $( "#slider-range-decimal" ).slider({
+      range: "min",
+      min: -10,
+      max: 10,
+	  value: 0,
+	  step: 0.5,
+      slide: function( event, ui ) {
+        $( "#sliderdec" ).val( ui.value );
+      }
+    });
+    $( "#sliderdec" ).val( $( "#slider-range-decimal" ).slider( "value" ) );
+	
+	
+	var select = $( "#sliderSelect" );
+
+	
+				$(select).selectToUISlider({
+				labels: 4,
+				tooltip: false,
+				labelSrc: "text"
+				
+			});
+			
+	$( "#slider-range" ).slider({
+      range: true,
+      min: 100,
+      max: 2000,
+	  values: [ 150, 250 ],
+	  step: 50,
+      slide: function( event, ui ) {
+        $("#sliderRange1").val(ui.values[0]);
+		$("#sliderRange2").val(ui.values[1]);
+      }
+    });
+	    $( "#sliderRange1" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ));
+        $( "#sliderRange2" ).val( "$" + $( "#slider-range" ).slider( "values", 1 ));
+  } );
+  </script>
+<div id="question_q11" class="question number label_q11 mt">
+<h1>Out of your income what % was spent on Groceries?</h1>
+
+
+<h4>Drag the slider to a point on the scale.</h4>
+<!-- /.instruction-text -->
+<div class="answers">
+<div class="input-group slider">
+<input type="text" name="sliderNum" id="sliderNum" size="2" value="1" class="input text-input sliderNum editable" style="display: inline-block;">
+  <div class="input-group-append">
+    <span class="input-group-text" id="basic-addon2">%</span>
+  </div>
+</div>
+      
+      
+	  <div id="slider-range-number" class="slider"></div>
+    </div>
+
+
+    </div>
+
+	
+	<div id="question_q12" class="question float label_q12 mt">
+<h1>How was your company's revenue affected in the last year?</h1>
+
+
+<h4>Drag the slider to a point on the scale.</h4>
+<!-- /.instruction-text -->
+<div class="answers">
+<div class="input-group slider">
+<input type="text" name="sliderDec" id="sliderdec" size="2" value="1" class="input text-input sliderdecimal editable" style="display: inline-block;">
+  <div class="input-group-append">
+    <span class="input-group-text" id="basic-addon2">%</span>
+  </div>
+</div>
+      
+      
+	  <div id="slider-range-decimal" class="slider"></div>
+    </div>
+
+
+    </div>
+	
+	
+<div id="question_q13" class="question select label_q13 mt">
+<h1>On average, how often do you use coupons when you shop?</h1>
+
+
+<h4>Drag the slider to a point on the scale.</h4>
+<!-- /.instruction-text -->
+<div class="answers">
+<select name="slidersel" id="sliderSelect" class="input dropdown">
+<option value="1">Almost every time I shop</option>
+<option value="2">Occasionally</option>
+<option value="3">Rarely</option>
+<option value="4">Never</option>
+</select>
+      
+
+    </div>
+    </div>
+	
+	
+	<div id="question_q14" class="question range label_q14 mt">
+<h1>When it comes to spending on your mobile phone needs what is the range of prices you generally look into?</h1>
+
+
+<h4>Drag the slider to a point on the scale.</h4>
+<!-- /.instruction-text -->
+<div class="answers">
+<div class="input-group sliderRange">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="basic-addon2">$</span>
+  </div>
+<input type="text" name="sliderRange" id="sliderRange1" size="2" value="150" class="input text-input sliderRange editable" style="display: inline-block;">
+  <div class="input-group-append">
+    <span class="input-group-text" id="basic-addon2">-</span>
+  </div>
+<div class="input-group-prepend">
+    <span class="input-group-text" id="basic-addon2">$</span>
+  </div>
+<input type="text" name="sliderRange" id="sliderRange2" size="2" value="400" class="input text-input sliderRange editable" style="display: inline-block;">
+
+</div>
+     
+
+	 
+      
+	  <div id="slider-range" class="slider"></div>
+    </div>
+
+
+    </div>
+	
+	</div>
+
+
+
+
+
+</form>
+<div class="row">
+  <div class="col-xl-4 col-lg-3 col-md-2 col-sm-1 d-sm-flex d-none">
+  </div>
+  <div class="col-xl-4 col-lg-6 col-md-8 col-sm-10 col-12 mt">
+  <button type="button" class="btn btn-outline-dark btn-block" onclick="document.location.href='demosetup.html';">Finish</button>
+</div>
+  <div class="col-xl-4 col-lg-3 col-md-2 col-sm-1 d-sm-flex d-none">
+  </div>
+</div>
+</div>
+<div class="footer_border mt">
+
+<div class="shape2_footer"></div>
+</div>
+<!-- border_area_end -->
+        <!-- footer_start -->
+    <footer class="footer">
+        <div class="footer_top footer_bg">
+            <div class="container-fluid p-0">
+                <div class="row no-gutters ">
+                    <div class="col-xl-1 col-12 col-md-1">
+
+                    </div>
+                    <div class="col-xl-10 col-12 col-md-10">
+
+                        <div class="row">
+                            <div class="col-xl-12 col-12 col-md-12">
+                                <div class="row">
+                                    <div class="col-xl-3 col-12 col-md-3">
+                                        <div class="footer_widget">
+                                            <h3 class="footer_heading">
+                                                Who We Are
+                                            </h3>
+                                            <ul class="quick_links">
+                                                <li><a href="JavaScript:Void(0);">About us</a></li>
+                                                <li><a href="JavaScript:Void(0);">Our Team</a></li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-12 col-md-3">
+                                        <div class="footer_widget">
+                                            <h3 class="footer_heading">
+                                                Our Practice
+                                            </h3>
+                                            <ul class="quick_links">
+                                                <li><a href="./analytics.html">Analytics</a></li>
+                                                <li><a href="./marketresearch.html">Market Research Consulting</a></li>
+                        <li><a href="./researhdevelopment.html">Research and Development</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                  <div class="col-xl-3 col-12 col-md-3">
+                                        <div class="footer_widget">
+                                            <h3 class="footer_heading">
+                                                Our Assets
+                                            </h3>
+                                            <ul class="quick_links oassets">
+                                                <li><a href="ourassets.html#ods" data-target="0">On-Demand Scale</a></li>
+                                                <li><a href="ourassets.html#qch" data-target="1">Quality Check</a></li>
+                        <li><a href="ourassets.html#din" data-target="2">Data Integrity</a></li>
+                        <li><a href="ourassets.html#dag" data-target="3">Device Agnosticism</a></li>
+                        <li><a href="ourassets.html#ast" data-target="4">Assistance</a></li>
+                      </ul>
+                      </div>
+                                    </div>
+                  <div class="col-xl-3 col-12 col-md-3">
+                      <div class="footer_widget">
+                                            <h3 class="footer_heading">
+                                                Consult Us
+                                            </h3>
+                      <ul class="quick_links">
+                        <li><a href="demosetup.html">Demo survey link</a></li>
+                        <li><a href="mailto:consult@beesphere.com" id="consultus"><i class="fas fa-envelope"></i> consult@beesphere.com</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+              <div class="col-xl-1 col-12 col-md-1"></div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
