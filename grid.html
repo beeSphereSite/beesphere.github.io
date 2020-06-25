@@ -1,0 +1,424 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="description" content="beeSphere - Agility with stability">
+	<meta name="keywords" content="beeSphere, creative, html">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>beeSphere - grid questions</title>
+	<!-- Favicon -->
+	<link href="img/favicon.ico" rel="shortcut icon"/>
+    <!-- Place favicon.ico in the root directory -->
+   <style>
+input[type="radio"]{
+display: none;
+}
+table{
+width: 100%;
+}
+input[type='checkbox']{ display: none; }
+*{ box-sizing: border-box; user-select: none; }
+.radio {
+  position: relative;
+  cursor: pointer;
+  vertical-align: middle;
+  line-height: 20px;
+  font-size: 14px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  margin-bottom: 0;
+
+}
+.radio .label {
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #c8ccd4;
+  border-radius: 100%;
+  vertical-align: middle;
+  -webkit-tap-highlight-color: transparent;
+}
+.radio .label:after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background: #225cff;
+  transform: scale(0);
+  transition: all 0.2s ease;
+  opacity: 0.08;
+  pointer-events: none;
+  
+}
+.radio:hover .label:after {
+  transform: scale(3.6);
+}
+input[type="radio"]:checked + .label {
+  border-color: #225cff;
+}
+input[type="radio"]:checked + .label:after {
+  transform: scale(1);
+  transition: all 0.2s cubic-bezier(0.35, 0.9, 0.4, 0.9);
+  opacity: 1;
+}
+.hidden {
+  display: none;
+}
+
+.form-group {
+    
+    margin-left: -13% !important;
+}
+.questiongrid table tbody td, .questiongrid table thead th{
+max-width: 150px;
+width: 16.67%;
+text-align: center;
+border: 1px solid #e9e9e9;
+}
+
+input[type='checkbox'] + label{
+  position: relative;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  height: 100%;
+  justify-content: center;
+  color: #9e9e9e;
+  transition: color 250ms cubic-bezier(.4,.0,.23,1);
+}
+
+input[type='checkbox'] + label > span{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1.25em;
+  height: 1.25em;
+  background: transparent;
+  border: 2px solid #e9e9e9;
+  border-radius: 2px;
+  cursor: pointer;  
+  transition: all 250ms cubic-bezier(.4,.0,.23,1);
+}
+
+input[type='checkbox'] + label:hover > span, input[type='checkbox']:focus + label > span{
+  background: #e9e9e9;
+}
+input[type='checkbox']:checked + label > span{
+  border: 0.625em solid #FFEB3B;
+  animation: shrink-bounce 200ms cubic-bezier(.4,.0,.23,1);
+}
+input[type='checkbox']:checked + label > span:before{
+  content: "";
+  position: absolute;
+  top: 0.4em;
+  
+  border-right: 2px solid transparent;
+  border-bottom: 2px solid transparent;
+  transform: rotate(45deg);
+  transform-origin: 0% 100%;
+  animation: checkbox-check 125ms 250ms cubic-bezier(.4,.0,.23,1) forwards;
+}
+
+@keyframes shrink-bounce{
+  0%{
+    transform: scale(1);
+  }
+  33%{    
+    transform: scale(.85);
+  }
+  100%{
+    transform: scale(1);    
+  }
+}
+@keyframes checkbox-check{
+  0%{
+    width: 0;
+    height: 0;
+    border-color: #212121;
+    transform: translate3d(0,0,0) rotate(45deg);
+  }
+  33%{
+    width: .325em;
+    height: 0;
+    transform: translate3d(0,0,0) rotate(45deg);
+  }
+  100%{    
+    width: .325em;
+    height: .625em;    
+    border-color: #212121;
+    transform: translate3d(0,-.625em,0) rotate(45deg);
+  }
+}
+
+.mt {
+
+  margin-top: 35px;
+}
+
+   </style> 
+
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/fontawesome.min.css" integrity="sha256-/sdxenK1NDowSNuphgwjv8wSosSNZB0t5koXqd7XqOI=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.css" integrity="sha256-a2tobsqlbgLsWs7ZVUGgP5IvWZsx8bTNQpzsqCSm5mk=" crossorigin="anonymous" />
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+      <link rel="stylesheet" href="css/style.css"/>
+    <script>
+jQuery(document).ready(
+  function() {
+    /* survey.xml line 18 */
+    $ ('img.logo-image').attr('src','img/Logo.png');
+  $ ('.logo-right').css('text-align','right');
+  }
+);
+</script>
+</head>
+<body>
+    <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please upgrade your browser to improve your experience and security.</p>
+        <![endif]-->
+
+    <!-- logo-header-start -->
+    <header class="logo-header">
+			<div class="container-fluid ">
+				<div class="row">
+						<div class="logo col-12 col-sm-12 col-md-12 col-lg-6 justify-content-start align-items-start">
+							<a href="index.html">
+								<img src="img/logo.png" alt="Logo">
+							</a>
+						</div><!-- logo end -->
+						<div class="col-lg-6 d-none d-sm-none d-md-none d-lg-flex align-items-end">
+						<!-- border_area_start -->
+							<div class="shape_menu">
+								<div class="shape_border_Main"></div>
+							</div>
+						<!-- border_area_end -->
+						</div><!-- logo end -->
+
+				</div><!-- Row end -->
+			</div><!-- Container end -->
+	</header>
+<!-- logo-header-end -->
+
+
+<div class="container questioncontainer">
+    <div class="form-group">
+      <div class="row">
+
+        <div class="col-md-8 mt questiongrid">
+          <label for="Q1"><h2>How are you satisfied with each of the following Social media apps?</h2></label>
+          <h4 title="instructions" class="instruction-text">Select one button per row.</h4>
+    <table>
+<thead>
+    <tr>
+      <th/>
+      <th>Extremely satisfied</th>
+      <th>Satisfied</th>
+      <th>Neutral</th>
+      <th>Dissatisfied</th>
+      <th>Extremely dissatisfied</th>
+    </tr>      
+	</thead>
+	<tbody>
+    <tr>
+      <td>Facebook</td>
+      <td><label for="v"  class="radio"><input type="radio" name="1" id="v" value="1v"/><span class="label"></span></label></td>
+      <td><label for="w"  class="radio"><input type="radio" name="1" id="w" value="1w"/><span class="label"></span></label></td>
+      <td><label for="x"  class="radio"><input type="radio" name="1" id="x" value="1x"/><span class="label"></span></label></td>
+      <td><label for="y"  class="radio"><input type="radio" name="1" id="y" value="1y"/><span class="label"></span></label></td>
+      <td><label for="z"  class="radio"><input type="radio" name="1" id="z" value="1z"/><span class="label"></span></label></td>
+    </tr>                 
+    <tr>                  
+      <td>Instagram</td>  
+      <td><label for="v1" class="radio"><input type="radio" name="2" id="v1" value="1v"/><span class="label"></span></label></td>
+      <td><label for="w1" class="radio"><input type="radio" name="2" id="w1" value="1w"/><span class="label"></span></label></td>
+      <td><label for="x1" class="radio"><input type="radio" name="2" id="x1" value="1x"/><span class="label"></span></label></td>
+      <td><label for="y1" class="radio"><input type="radio" name="2" id="y1" value="1y"/><span class="label"></span></label></td>
+      <td><label for="z1" class="radio"><input type="radio" name="2" id="z1" value="1z"/><span class="label"></span></label></td>
+    </tr>                                                                                             
+    <tr>                                                                                              
+      <td> Twitter</td>                                                                               
+      <td><label for="v2" class="radio"><input type="radio" name="3" id="v2" value="1v"/><span class="label"></span></label></td>
+      <td><label for="w2" class="radio"><input type="radio" name="3" id="w2" value="1w"/><span class="label"></span></label></td>
+      <td><label for="x2" class="radio"><input type="radio" name="3" id="x2" value="1x"/><span class="label"></span></label></td>
+      <td><label for="y2" class="radio"><input type="radio" name="3" id="y2" value="1y"/><span class="label"></span></label></td>
+      <td><label for="z2" class="radio"><input type="radio" name="3" id="z2" value="1z"/><span class="label"></span></label></td>
+    </tr>                                                                                             
+    <tr>                                                                                              
+      <td>Whatsapp</td>                                                                               
+      <td><label for="v3" class="radio"><input type="radio" name="4" id="v3" value="1v"/><span class="label"></span></label></td>
+      <td><label for="w3" class="radio"><input type="radio" name="4" id="w3" value="1w"/><span class="label"></span></label></td>
+      <td><label for="x3" class="radio"><input type="radio" name="4" id="x3" value="1x"/><span class="label"></span></label></td>
+      <td><label for="y3" class="radio"><input type="radio" name="4" id="y3" value="1y"/><span class="label"></span></label></td>
+      <td><label for="z3" class="radio"><input type="radio" name="4" id="z3" value="1z"/><span class="label"></span></label></td>
+    </tr>                                                                                             
+    <tr>                                                                                              
+      <td>Telegram</td>                                                                               
+      <td><label for="v4" class="radio"><input type="radio" name="5" id="v4" value="1v"/><span class="label"></span></label></td>
+      <td><label for="w4" class="radio"><input type="radio" name="5" id="w4" value="1w"/><span class="label"></span></label></td>
+      <td><label for="x4" class="radio"><input type="radio" name="5" id="x4" value="1x"/><span class="label"></span></label></td>
+      <td><label for="y4" class="radio"><input type="radio" name="5" id="y4" value="1y"/><span class="label"></span></label></td>
+      <td><label for="z4" class="radio"><input type="radio" name="5" id="z4" value="1z"/><span class="label"></span></label></td>
+    </tr>
+
+	</tbody>
+</table>
+                
+        </div>
+        <div class="col-md-8 mt questiongrid">
+<label for="Q2"><h2>When do you perform the following activities?</h2></label>
+<h4 title="instructions" class="instruction-text">Select all buttons that apply.</h4>
+<table>
+<thead>
+    <tr>
+      <th/>
+      <th>Morning</th>
+      <th>Afternoon</th>
+      <th>Evening</th>
+      <th>Night</th>
+
+    </tr>      
+	</thead>
+	<tbody>
+    
+    <tr>
+      <td>Reading</td>
+      <td><input type="checkbox" name="1" id="a" value="1a"/><label for="a"><span></span></label></td>
+      <td><input type="checkbox" name="1" id="b" value="1b"/><label for="b"><span></span></label></td>
+      <td><input type="checkbox" name="1" id="c" value="1c"/><label for="c"><span></span></label></td>
+      <td><input type="checkbox" name="1" id="d" value="1d"/><label for="d"><span></span></label></td>
+      
+    </tr>                                                                 
+    <tr>                                                                  
+      <td>Sports</td>                                                   
+      <td><input type="checkbox" name="2" id="a1" value="1a"/><label for="a1"><span></span></label></td>
+      <td><input type="checkbox" name="2" id="b1" value="1b"/><label for="b1"><span></span></label></td>
+      <td><input type="checkbox" name="2" id="c1" value="1c"/><label for="c1"><span></span></label></td>
+      <td><input type="checkbox" name="2" id="d1" value="1d"/><label for="d1"><span></span></label></td>
+                                                                                                         
+    </tr>                                                                                                
+    <tr>                                                                                                 
+      <td>Eating</td>                                                                                    
+      <td><input type="checkbox" name="3" id="a2" value="1a"/><label for="a2"><span></span></label></td>
+      <td><input type="checkbox" name="3" id="b2" value="1b"/><label for="b2"><span></span></label></td>
+      <td><input type="checkbox" name="3" id="c2" value="1c"/><label for="c2"><span></span></label></td>
+      <td><input type="checkbox" name="3" id="d2" value="1d"/><label for="d2"><span></span></label></td>
+                                                            
+    </tr>                                                                 
+    <tr>                                                                  
+      <td>Watching TV</td>                                                  
+      <td><input type="checkbox" name="4" id="a3" value="1a"/><label for="a3"><span></span></label></td>
+      <td><input type="checkbox" name="4" id="b3" value="1b"/><label for="b3"><span></span></label></td>
+      <td><input type="checkbox" name="4" id="c3" value="1c"/><label for="c3"><span></span></label></td>
+      <td><input type="checkbox" name="4" id="d3" value="1d"/><label for="d3"><span></span></label></td>
+      
+    </tr>                                                                 
+</tbody>
+</table>
+</div>
+
+      </div>
+    </div>
+        
+
+<div class="row">
+  <div class="col-xl-4 col-lg-3 col-md-2 col-sm-1 d-sm-flex d-none">
+  </div>
+  <div class="col-xl-4 col-lg-6 col-md-8 col-sm-10 col-12 mt">
+  <button type="button" class="btn btn-outline-dark btn-block" onclick="document.location.href='demosetup.html';">Finish</button>
+</div>
+  <div class="col-xl-4 col-lg-3 col-md-2 col-sm-1 d-sm-flex d-none">
+  </div>
+</div>
+</div>
+
+<div class="footer_border">
+
+<div class="shape2_footer"></div>
+</div>
+<!-- border_area_end -->
+        <!-- footer_start -->
+    <footer class="footer">
+        <div class="footer_top footer_bg">
+            <div class="container-fluid p-0">
+                <div class="row no-gutters ">
+                    <div class="col-xl-1 col-12 col-md-1">
+
+                    </div>
+                    <div class="col-xl-10 col-12 col-md-10">
+
+                        <div class="row">
+                            <div class="col-xl-12 col-12 col-md-12">
+                                <div class="row">
+                                    <div class="col-xl-3 col-12 col-md-3">
+                                        <div class="footer_widget">
+                                            <h3 class="footer_heading">
+                                                Who We Are
+                                            </h3>
+                                            <ul class="quick_links">
+                                                <li><a href="JavaScript:Void(0);">About us</a></li>
+                                                <li><a href="JavaScript:Void(0);">Our Team</a></li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-12 col-md-3">
+                                        <div class="footer_widget">
+                                            <h3 class="footer_heading">
+                                                Our Practice
+                                            </h3>
+                                            <ul class="quick_links">
+                                                <li><a href="./analytics.html">Analytics</a></li>
+                                                <li><a href="./marketresearch.html">Market Research Consulting</a></li>
+												<li><a href="./researhdevelopment.html">Research and Development</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+									<div class="col-xl-3 col-12 col-md-3">
+                                        <div class="footer_widget">
+                                            <h3 class="footer_heading">
+                                                Our Assets
+                                            </h3>
+                                            <ul class="quick_links oassets">
+                                                <li><a href="ourassets.html#ods" data-target="0">On-Demand Scale</a></li>
+                                                <li><a href="ourassets.html#qch" data-target="1">Quality Check</a></li>
+												<li><a href="ourassets.html#din" data-target="2">Data Integrity</a></li>
+												<li><a href="ourassets.html#dag" data-target="3">Device Agnosticism</a></li>
+												<li><a href="ourassets.html#ast" data-target="4">Assistance</a></li>
+											</ul>
+											</div>
+                                    </div>
+									<div class="col-xl-3 col-12 col-md-3">
+											<div class="footer_widget">
+                                            <h3 class="footer_heading">
+                                                Consult Us
+                                            </h3>
+											<ul class="quick_links">
+												<li><a href="demosetup.html">Demo survey link</a></li>
+												<li><a href="mailto:consult@beesphere.com" id="consultus"><i class="fas fa-envelope"></i> consult@beesphere.com</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+					    <div class="col-xl-1 col-12 col-md-1"></div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer_end -->
+</body>
+</html>

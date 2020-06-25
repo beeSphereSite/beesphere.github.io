@@ -1,0 +1,562 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="description" content="beeSphere - Agility with stability">
+	<meta name="keywords" content="beeSphere, creative, html">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>beeSphere - Demo Setups</title>
+	<!-- Favicon -->
+	<link href="img/favicon.ico" rel="shortcut icon"/>
+    <!-- Place favicon.ico in the root directory -->
+    <!-- CSS here -->
+    <link rel="stylesheet" href="css/style.css"/>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" crossorigin="anonymous"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/fontawesome.min.css"  crossorigin="anonymous" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"  crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.css"  crossorigin="anonymous" />
+<head>
+   <style>
+
+.shape1 {
+  margin-top: 0rem;
+  border-bottom: 40px solid #e6a947;
+  border-right: 110px solid transparent;
+  height: 0;
+  width: 73%;
+  margin-bottom: 7px;
+}
+.questionContainer{
+
+
+}
+.shape2 {
+  margin-top: 0.5rem;
+  float:right;
+  border-top: 40px solid #007399;
+  border-left: 110px solid transparent;
+  height: 0;
+  width: 25%;
+padding-bottom: 7px;
+}
+.mt p{
+font-size: initial !important;
+
+}
+.questionContainer{
+padding-bottom: 1.5rem;
+
+}
+.elementQ1 input[type='checkbox'] + label {
+background-image: url("./img/fir_img/unchecked_checkbox.png");
+background-size: 20px 20px;
+background-repeat: no-repeat;
+cursor: pointer;
+}
+
+.elementQ1 input[type='checkbox']:checked + label{
+  background-image: url("./img/fir_img/checked_checkbox.png");
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  cursor: pointer;  
+}
+.elementQ1 input[type='checkbox']{
+
+  display: none;
+}
+
+.elementQ1 input[type='checkbox'] + label:hover {
+    background-image: url("./img/fir_img/checked_checkbox.png");
+
+
+}
+
+ .elementQ2 input[type='radio'] + label {
+background-image: url("img/fir_img/unchecked-radio.png");
+background-size: 20px 20px;
+background-repeat: no-repeat;
+cursor: pointer;
+}
+
+
+.elementQ2 input[type='radio']:checked + label{
+  background-image: url("img/fir_img/checked_radio.png");
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  cursor: pointer;  
+}
+.elementQ2 input[type='radio']{
+
+  display: none;
+}
+
+.elementQ2 input[type='radio'] + label:hover {
+    background-image: url("./img/fir_img/checked_radio.png");
+
+
+}
+
+.logo-image {
+width: 20%;
+
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+.radio {
+  position: relative;
+  cursor: pointer;
+  line-height: 20px;
+  font-size: 14px;
+  margin: 15px;
+}
+.radio .label {
+  position: relative;
+  display: block;
+  float: left;
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #c8ccd4;
+  border-radius: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+.radio .label:after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background: #225cff;
+  transform: scale(0);
+  transition: all 0.2s ease;
+  opacity: 0.08;
+  pointer-events: none;
+}
+.radio:hover .label:after {
+  transform: scale(3.6);
+}
+input[type="radio"]:checked + .label {
+  border-color: #225cff;
+}
+input[type="radio"]:checked + .label:after {
+  transform: scale(1);
+  transition: all 0.2s cubic-bezier(0.35, 0.9, 0.4, 0.9);
+  opacity: 1;
+}
+.cntr {
+  position: absolute;
+  top: calc(50% - 10px);
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+.hidden {
+  display: none;
+}
+.credit {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  transition: all 0.2s ease;
+  -webkit-user-select: none;
+  user-select: none;
+  opacity: 0.6;
+}
+.credit img {
+  width: 72px;
+}
+.credit:hover {
+  transform: scale(0.95);
+}
+
+  
+
+  
+.checkboxes-and-radios input {
+  display: none;
+}
+.checkboxes-and-radios label {
+  cursor: pointer;
+  padding-right: 35px;
+  position: relative;
+  display: block;
+  font-size: 18px;
+
+}
+.checkboxes-and-radios input[type="checkbox"],
+.checkboxes-and-radios input[type="radio"] {
+  position: absolute;
+  visibility: hidden !important;
+}
+.checkboxes-and-radios input[type="checkbox"] + label:before,
+.checkboxes-and-radios input[type="radio"] + label:before,
+.checkboxes-and-radios input[type="checkbox"] + label:after,
+.checkboxes-and-radios input[type="radio"] + label:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  margin-top: -7.5px;
+  box-sizing: border-box;
+}
+.checkboxes-and-radios input[type="checkbox"] + label:before,
+.checkboxes-and-radios input[type="radio"] + label:before {
+  width: 30px;
+  height: 15px;
+  right: 0px;
+  background: #fff;
+  border: 1px solid #cfcdc9;
+  border-radius: 15px;
+}
+.checkboxes-and-radios input[type="checkbox"] + label:after,
+.checkboxes-and-radios input[type="radio"] + label:after {
+  width: 15px;
+  height: 15px;
+  right: 15px;
+  background: #09afeb;
+  border-radius: 50%;
+  -webkit-transition: all 200ms ease-out;
+  transition: all 200ms ease-out;
+}
+.checkboxes-and-radios input[type="checkbox"]:checked + label:after,
+.checkboxes-and-radios input[type="radio"]:checked + label:after {
+  right: 0px;
+  background: #FF9800;
+}
+
+
+
+.mr {
+
+  padding-top:35px;
+}
+.mt {
+
+  margin-top: 1.75rem;
+}
+
+#other-text {
+  border: 1px solid #000;
+border-radius: 3px;
+  display: none;
+  width: 250px;
+  text-align: center;
+}
+
+   </style> 
+
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+
+
+    <script>
+jQuery(document).ready(
+  function() {
+    /* survey.xml line 18 */
+    $ ('img.logo-image').attr('src','img/Logo.png');
+  $ ('.logo-right').css('text-align','right');
+  }
+);
+</script>
+</head>
+<body>
+    <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please upgrade your browser to improve your experience and security.</p>
+        <![endif]-->
+
+    <!-- logo-header-start -->
+    <header class="logo-header">
+				<div class="container-fluid ">
+				<div class="row">
+						<div class="logo col-12 col-sm-12 col-md-12 col-lg-6">
+							<a href="index.html">
+								<img src="img/logo.png" alt="Logo">
+							</a>
+						</div><!-- logo end -->
+						<div class="col-md-6 col-lg-6 d-none d-sm-none d-md-none d-lg-flex align-items-end">
+
+								<!--<img src="img/panels/Panel1.svg">-->
+								<!-- border_area_start -->
+								<div class="shape_menu">
+									<div class="shape_border_Main"></div>
+								</div>
+								<!-- border_area_end -->
+						</div><!-- logo end -->
+
+				</div><!-- Row end -->
+			</div><!-- Container end -->
+</header>
+<div class="container questionContainer">
+  <div class="row">
+      <div class="col-xl-5 col-lg-6 col-md-11 col-sm-12 col-12 mt">
+        <label for="Q1"><h3>How many social media account you use?</h3></label>
+        <p>Select all that apply</p>
+        
+      <div class="answers answers-list">
+        <div class="elementQ1 element clickable">  
+          <input type="checkbox" style="text-align: center" name="social" class="social_media" id="fb" ><label for="fb"><span style="padding-left:30px;">Facebook</span></label></input>
+        </div>
+         <div class="elementQ1 element clickable">
+          <input type="checkbox" style="text-align: center" name="social" class="social_media" id="in"><label for="in"><span style="padding-left:30px;">Instagram</span></label></input>
+        </div>
+        <div class="elementQ1 element clickable">
+          <input type="checkbox" style="text-align: center" name="social" class="social_media" id="tw"><label for="tw"><span style="padding-left:30px;">Twitter</span></label></input>
+        </div>
+        <div class="elementQ1 element clickable">
+          <input type="checkbox" style="text-align: center" name="social" class="social_media" id="wh"><label for="wh"><span style="padding-left:30px;">Whatsapp</span></label></input>
+        </div>
+        <div class="elementQ1 element clickable">
+          <input type="checkbox" style="text-align: center" name="social" class="social_media" id="tl"><label for="tl"><span style="padding-left:30px;">Telegram</span></label></input>
+        </div>
+        <div class="elementQ1 element clickable">
+          <input type="checkbox" style="text-align: center" name="social" class="social_media" id="oth" value="other"><label for="oth"><span style="padding-left:30px;">Other</span></label></input>
+          <input id='other-text' placeholder='Please enter other social media app' type='text' />
+        </div>
+        <div class="elementQ1 element clickable">
+          <input type="checkbox" style="text-align: center" name="social" class="social_media" id="none" value="none"><label for="none"><span style="padding-left:30px;">None of the above</span></label></input>
+        </div>
+        </div>
+      </div>  
+  <div class="col-xl-2 d-none d-sm-none d-md-none d-lg-none d-xl-flex"></div>
+ <div class="col-xl-5 col-lg-6 col-md-11 col-sm-12 col-12 mt">
+        <label for="Q2"><h3>What is your gender?</h3></label>
+           <p>Select one</p>
+    
+    <div class="answers answers-list">
+        <div class="elementQ2 element clickable">
+          <input type="radio" style="text-align: center" name="social" class="gender" id="m" ><label for="m"><span style="padding-left:30px;">Male</span></label></input>
+        </div>
+        <div class="elementQ2 element clickable">
+          <input type="radio" style="text-align: center" name="social" class="gender" id="f"><label for="f"><span style="padding-left:30px;">Female</span></label></input>
+        </div>
+        <div class="elementQ2 element clickable">
+          <input type="radio" style="text-align: center" name="social" class="gender" id="p"><label for="p"><span style="padding-left:30px;">Prefer not to say</span></label></input>
+        </div>
+      </div>   
+    </div>
+</div>
+
+<div class="row">
+  <div class="col-xl-5 col-lg-6 col-md-11 col-sm-12 col-12 mt">
+  <label for="Q3"><h3>Which one social media app do you mostly used?</h3></label>
+  <p>Select only one</p>
+
+  <div class="elementQ3 element clickable">
+  <label for="opt1" class="radio">
+    <input type="radio" name="rdo" id="opt1" class="hidden"/>
+    <span class="label"></span>Facebook
+  </label>
+</div>
+
+<div class="elementQ3 element clickable">
+  <label for="opt2" class="radio">
+    <input type="radio" name="rdo" id="opt2" class="hidden"/>
+    <span class="label"></span>Instagram
+  </label>
+</div>
+  
+  <div class="elementQ3 element clickable">
+  <label for="opt3" class="radio">
+    <input type="radio" name="rdo" id="opt3" class="hidden"/>
+    <span class="label"></span>Twitter
+  </label>
+  </div>
+  <div class="elementQ3 element clickable">
+  <label for="opt4" class="radio">
+    <input type="radio" name="rdo" id="opt4" class="hidden"/>
+    <span class="label"></span>Whatsapp
+  </label>
+</div>
+</div>
+<div class="col-xl-2 d-none d-sm-none d-md-none d-lg-none d-xl-flex"></div>
+  <div class="col-xl-5 col-lg-6 col-md-8 col-sm-12 col-12 checkboxes-and-radios mt">
+  <label for="Q4"><h3>Who do you sell to?</h3></label>
+  <p>Select only one</p>
+  <div class="elementQ4 element clickable">
+  <input type="radio" name="radio-cats" id="radio-1" value="1">
+  <label for="radio-1">Other businesses</label>
+</div>
+<div class="elementQ4 element clickable">
+  <input type="radio" name="radio-cats" id="radio-2" value="2">
+  <label for="radio-2">Directly to consumers</label>
+</div>
+  <div class="elementQ4 element clickable">
+  <input type="radio" name="radio-cats" id="radio-3" value="3">
+  <label for="radio-3">Both to other businesses and consumers</label>
+</div>
+  <div class="elementQ4 element clickable">
+  <input type="radio" name="radio-cats" id="radio-4" value="4">
+  <label for="radio-4">Other</label>
+</div>
+  </div>
+</div>
+  <div class="row">
+
+  <div class="col-xl-8 col-lg-8 col-md-11 col-sm-12 col-12 checkboxes-and-radios mt">
+  <label for="Q5"><h3>What factors are important to you when buying a software product?</h3></label>
+  <p>Select all that apply</p>
+  <div class="elementQ5 element clickable">
+  <input type="checkbox" name="checkbox-cats" id="checkbox-1" value="1">
+  <label for="checkbox-1">Price</label>
+</div>
+<div class="elementQ5 element clickable">
+  <input type="checkbox" name="checkbox-cats" id="checkbox-2" value="2">
+  <label for="checkbox-2">Usability</label>
+</div>
+<div class="elementQ5 element clickable">
+  <input type="checkbox" name="checkbox-cats" id="checkbox-3" value="3">
+  <label for="checkbox-3">Features</label>
+</div>
+<div class="elementQ5 element clickable">
+  <input type="checkbox" name="checkbox-cats" id="checkbox-4" value="4">
+  <label for="checkbox-4">Support</label>
+</div>
+<div class="elementQ5 element clickable">
+  <input type="checkbox" name="checkbox-cats" id="checkbox-5" value="5">
+  <label for="checkbox-5">Other</label>
+</div>
+</div>
+  </div>
+  
+  <div class="row">
+<div class="col-xl-8 col-lg-8 col-md-11 col-sm-12 col-12 mt">
+  <label for="Q6"><h3>What is your birth date?</h3></label>
+  <div class="elementQ6 element clickable col-xl-4 col-lg-4 col-md-6 col-sm-8 col-8 form-group">
+  <input type="date" name="bday" class="form-control"/>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xl-8 col-lg-8 col-md-11 col-sm-12 col-12 mt">
+  <label for="Q7"><h3>Please write down your key achievements?</h3></label>
+  <div class="elementQ7 element clickable col-xl-4 col-lg-4 col-md-6 col-sm-8 col-8 form-group">
+  <input type="text" name="txt" id="txt1" class="form-control">
+</div>
+</div>
+</div>
+
+
+<div class="row">
+<div class="col-xl-8 col-lg-8 col-md-11 col-sm-12 col-12 mt">
+  <label for="Q7"><h1>What is your age?</h1></label>
+  <div class="elementQ7 element clickable col-xl-4 col-lg-4 col-md-6 col-sm-8 col-8 form-group">
+  <input type="number" name="num" id="num1" class="form-control">
+</div>
+</div>
+</div>
+
+<div class="row">
+	  <div class="col-xl-4 col-lg-4 col-md-3 col-sm-1 d-sm-flex d-none"></div>	  
+	  
+	  <div class="col-xl-4 col-lg-4 col-md-6 col-sm-10 col-12 mt">
+	  <button class="btn btn-outline-dark btn-block" type="button" onclick="document.location.href='demosetup.html';">Finish</button>
+	  </div>	  
+	  
+	  <div class="col-xl-4 col-lg-4 col-md-3 col-sm-1 d-sm-flex d-none"></div>	  
+    </div>
+       </div> 
+
+
+       <div class="footer_border">
+
+<div class="shape2_footer"></div>
+</div>
+<!-- border_area_end -->
+<footer class="footer">
+  <div class="footer_top footer_bg">
+      <div class="container-fluid p-0">
+          <div class="row no-gutters ">
+              <div class="col-xl-1 col-12 col-md-1">
+
+              </div>
+              <div class="col-xl-10 col-12 col-md-10">
+
+                  <div class="row">
+                      <div class="col-xl-12 col-12 col-md-12">
+                          <div class="row">
+                              <div class="col-xl-3 col-12 col-md-3">
+                                  <div class="footer_widget">
+                                      <h3 class="footer_heading">
+                                          Who We Are
+                                      </h3>
+                                      <ul class="quick_links">
+                                          <li><a href="JavaScript:Void(0);">About us</a></li>
+                                          <li><a href="JavaScript:Void(0);">Our Team</a></li>
+
+                                      </ul>
+                                  </div>
+                              </div>
+                              <div class="col-xl-3 col-12 col-md-3">
+                                  <div class="footer_widget">
+                                      <h3 class="footer_heading">
+                                          Our Practice
+                                      </h3>
+                                      <ul class="quick_links">
+                                          <li><a href="./analytics.html">Analytics</a></li>
+                                          <li><a href="./marketresearch.html">Market Research Consulting</a></li>
+                  <li><a href="./researhdevelopment.html">Research and Development</a></li>
+                                      </ul>
+                                  </div>
+                              </div>
+            <div class="col-xl-3 col-12 col-md-3">
+                                  <div class="footer_widget">
+                                      <h3 class="footer_heading">
+                                          Our Assets
+                                      </h3>
+                                      <ul class="quick_links oassets">
+                                          <li><a href="ourassets.html#ods" data-target="0">On-Demand Scale</a></li>
+                                          <li><a href="ourassets.html#qch" data-target="1">Quality Check</a></li>
+                  <li><a href="ourassets.html#din" data-target="2">Data Integrity</a></li>
+                  <li><a href="ourassets.html#dag" data-target="3">Device Agnosticism</a></li>
+                  <li><a href="ourassets.html#ast" data-target="4">Assistance</a></li>
+                </ul>
+                </div>
+                              </div>
+            <div class="col-xl-3 col-12 col-md-3">
+                <div class="footer_widget">
+                                      <h3 class="footer_heading">
+                                          Consult Us
+                                      </h3>
+                <ul class="quick_links">
+                                          <li><a href="demosetup.html">Demo survey link</a></li>
+                  <li><a href="mailto:consult@beesphere.com" id="consultus"><i class="fas fa-envelope"></i> consult@beesphere.com</a></li>
+                                      </ul>
+                                  </div>
+                              </div>
+
+                          </div>
+                      </div>
+                  </div>
+              </div>
+        <div class="col-xl-1 col-12 col-md-1"></div>
+          </div>
+      </div>
+  </div>
+</footer>
+<!-- footer_end -->
+
+    <script>
+      $(".social_media").change(function(){
+
+        if(this.value==="other"){
+          $("#other-text").toggle();
+        }
+      });
+
+$('input').change(function() {
+  var $el = $(this);
+  
+  if ($el.attr('id') == 'none' && $el.prop('checked')) {
+    $('input').not($el).prop('checked', false);
+  } else {
+    $('#none').prop('checked', false);  
+  }
+});
+
+    </script>
+</body>
+</html>

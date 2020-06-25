@@ -1,0 +1,352 @@
+<html>
+<head>
+   <style>
+
+.shape1 {
+  margin-top: 0rem;
+  border-bottom: 40px solid #e6a947;
+  border-right: 110px solid transparent;
+  height: 0;
+  width: 73%;
+  margin-bottom: 7px;
+}
+.shape2 {
+  margin-top: 0.5rem;
+  float:right;
+  border-top: 40px solid #007399;
+  border-left: 110px solid transparent;
+  height: 0;
+  width: 25%;
+padding-bottom: 7px;
+}
+.buttonimg img{
+max-width: 100%;
+}
+.buttonimg label{
+width: 100%;
+}
+input[type='checkbox'] + label {
+border-radius: 7px;
+cursor: pointer;
+border: 1px solid #fff;
+background-color: #fcba03;
+color: #fff;
+cursor: pointer;
+}
+
+
+input[type='checkbox']:checked + label{
+  background-color: #09afeb;
+  color: #000;
+  cursor: pointer;
+  cursor: pointer;  
+}
+input[type='checkbox']{
+
+  display: none;
+}
+
+input[type='checkbox'] + label:hover {
+    background-color: #09afeb;
+
+
+}
+
+
+input[type='radio'] + label {
+
+
+border-radius: 7px;
+cursor: pointer;
+border: 1px solid #fff;
+background-color: #fcba03;
+color: #fff;
+}
+
+
+input[type='radio']:checked + label{
+  
+  
+  
+  background-color: #09afeb;
+  color: #000;
+  cursor: pointer;  
+}
+input[type='radio']{
+
+  display: none;
+}
+
+input[type='radio'] + label:hover {
+    background-color: #09afeb;
+
+
+}
+.content {
+
+padding-left:10px;
+padding-right:10px;
+
+font-size: 20px;
+text-align: center;
+font-weight: bold;
+
+}
+.logo-image {
+width: 20%;
+
+}
+.mr {
+
+  padding-top:30px;
+}
+
+.mt{
+
+  margin-top: 35px;
+}
+
+
+   </style> 
+
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/fontawesome.min.css" integrity="sha256-/sdxenK1NDowSNuphgwjv8wSosSNZB0t5koXqd7XqOI=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.css" integrity="sha256-a2tobsqlbgLsWs7ZVUGgP5IvWZsx8bTNQpzsqCSm5mk=" crossorigin="anonymous" />
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="css/style.css"/>
+<script>
+jQuery(document).ready(
+  function() {
+    /* survey.xml line 18 */
+    $ ('img.logo-image').attr('src','img/Logo.png');
+  $ ('.logo-right').css('text-align','right');
+  }
+);
+</script>
+
+</head>
+<body>
+    <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please upgrade your browser to improve your experience and security.</p>
+        <![endif]-->
+
+    <!-- logo-header-start -->
+    <header class="logo-header">
+				<div class="container-fluid ">
+				<div class="row">
+						<div class="logo col-12 col-sm-12 col-md-12 col-lg-6">
+							<a href="index.html">
+								<img src="img/logo.png" alt="Logo">
+							</a>
+						</div><!-- logo end -->
+						<div class="col-md-6 col-lg-6 d-none d-sm-none d-md-none d-lg-flex align-items-end">
+
+								<!--<img src="img/panels/Panel1.svg">-->
+								<!-- border_area_start -->
+								<div class="shape_menu">
+									<div class="shape_border_Main"></div>
+								</div>
+								<!-- border_area_end -->
+						</div><!-- logo end -->
+
+				</div><!-- Row end -->
+			</div><!-- Container end -->
+</header>
+   
+<div class="container questioncontainer">
+   <div class="form-group">
+      <div class="row">
+        <div class="col-md-8 mt">
+          <label for="Q1"><h3>Which gender you belong to?</h3></label>
+            <p>Select one</p>
+              <div class="col-md-2">
+                <input type="radio" name="social" class="social_media" id="m" ><label for="m" style="width: 200px; text-align: center;"><span class="content">Male</span></label></input>
+              </div>
+          <div class="col-md-2">
+            <input type="radio" name="social" class="social_media" id="f"><label for="f" style="width: 200px;text-align: center;"><span class="content">Female</span></label></input>
+          </div>
+
+          <div class="col-md-2">
+            <input type="radio" name="social" class="social_media" id="p"><label for="p" style="width: 200px;text-align: center;"><span class="content">Prefer not to say</span></label></input>
+          </div>
+      </div>
+    
+
+
+
+        <div class="col-md-8 mt">
+          <label for="Q2"><h3>How many social media account you used?</h3></label>
+            <p>Select all that apply</p>
+            <div class="col-md-4"></div>
+              <div class="col-md-2">
+                <input type="checkbox" name="social" class="social_media" id="fb" ><label for="fb" style="width: 200px; text-align: center;"><span class="content">Facebook</span></label></input>
+              </div>
+              <div class="col-md-10"></div>
+
+          <div class="col-md-2">
+            <input type="checkbox" name="social" class="social_media" id="insta"><label for="insta" style="width: 200px;text-align: center;"><span class="content">Instagram</span></label></input>
+          </div>
+          <div class="col-md-10"></div>
+
+          <div class="col-md-2">
+            <input type="checkbox" name="social" class="social_media" id="tweet"><label for="tweet" style="width: 200px;text-align: center;"><span class="content">Twitter</span></label></input>
+          </div>
+          <div class="col-md-10"></div>
+
+          <div class="col-md-2">
+            <input type="checkbox" name="social" class="social_media" id="whtsap"><label for="whtsap" style="width: 200px;text-align: center;"><span class="content">Whatsapp</span></label></input>
+          </div>
+          <div class="col-md-10"></div>
+
+          <div class="col-md-2">
+            <input type="checkbox" name="social" class="social_media" id="tlgrm"><label for="tlgrm" style="width: 200px;text-align: center;"><span class="content">Telegram</span></label></input>
+          </div>
+          <div class="col-md-10"></div>
+      
+        <div class="col-md-2">
+            <input type="checkbox" name="social" class="social_media" id="none"><label for="none" style="width: 200px;text-align: center;"><span class="content">None of the above</span></label></input>
+          </div>
+          <div class="col-md-10"></div>
+  
+<div class="col-md-12 mt buttonimg">
+    <label for="Q2"><h3>How many social media account you used?</h3></label>
+            <p>Select all that apply</p>
+			<div class="container-fluid">
+            <div class="row mt">
+              <div class="col-md-2">
+                <input type="checkbox" name="social" class="social_media" id="fb1" ><label for="fb1" style="text-align: center;"><img src="./img/icons8-facebook-old-48.png"/></label></input>
+              </div>
+
+
+          <div class="col-md-2">
+            <input type="checkbox" name="social" class="social_media" id="insta1"><label for="insta1" style="text-align: center;"><img src="./img/instagram.png" /></label></input>
+          </div>
+
+
+          <div class="col-md-2">
+            <input type="checkbox" name="social" class="social_media" id="tweet1"><label for="tweet1" style="text-align: center;"><img src="./img/twitter.png" /></label></input>
+          </div>
+
+
+          <div class="col-md-2">
+            <input type="checkbox" name="social" class="social_media" id="whtsap1"><label for="whtsap1" style="text-align: center;"><img src="./img/whatsapp.png" /></label></input>
+          </div>
+
+
+          <div class="col-md-2">
+            <input type="checkbox" name="social" class="social_media" id="tlgrm1"><label for="tlgrm1" style="text-align: center;"><img src="./img/telegram.png" /></label></input>
+          </div>
+</div>
+</div>
+
+
+</div>
+</div>
+</div>
+</div>
+<div class="row">
+	  <div class="col-xl-4 col-lg-4 col-md-3 col-sm-1 d-sm-flex d-none"></div>	  
+	  
+	  <div class="col-xl-4 col-lg-4 col-md-6 col-sm-10 col-12 mt">
+	  <button class="btn btn-outline-dark btn-block" type="button" onclick="document.location.href='demosetup.html';">Finish</button>
+	  </div>	  
+	  
+	  <div class="col-xl-4 col-lg-4 col-md-3 col-sm-1 d-sm-flex d-none"></div>	  
+    </div>
+</div>
+  
+  
+  <div class="footer_border">
+
+<div class="shape2_footer"></div>
+</div>
+<!-- border_area_end -->
+        <!-- footer_start -->
+    <footer class="footer">
+        <div class="footer_top footer_bg">
+            <div class="container-fluid p-0">
+                <div class="row no-gutters ">
+                    <div class="col-xl-1 col-12 col-md-1">
+
+                    </div>
+                    <div class="col-xl-10 col-12 col-md-10">
+
+                        <div class="row">
+                            <div class="col-xl-12 col-12 col-md-12">
+                                <div class="row">
+                                    <div class="col-xl-3 col-12 col-md-3">
+                                        <div class="footer_widget">
+                                            <h3 class="footer_heading">
+                                                Who We Are
+                                            </h3>
+                                            <ul class="quick_links">
+                                                <li><a href="JavaScript:Void(0);">About us</a></li>
+                                                <li><a href="JavaScript:Void(0);">Our Team</a></li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-12 col-md-3">
+                                        <div class="footer_widget">
+                                            <h3 class="footer_heading">
+                                                Our Practice
+                                            </h3>
+                                            <ul class="quick_links">
+                                                <li><a href="./analytics.html">Analytics</a></li>
+                                                <li><a href="./marketresearch.html">Market Research Consulting</a></li>
+												<li><a href="./researhdevelopment.html">Research and Development</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+									<div class="col-xl-3 col-12 col-md-3">
+                                        <div class="footer_widget">
+                                            <h3 class="footer_heading">
+                                                Our Assets
+                                            </h3>
+                                            <ul class="quick_links oassets">
+                                                <li><a href="ourassets.html#ods" data-target="0">On-Demand Scale</a></li>
+                                                <li><a href="ourassets.html#qch" data-target="1">Quality Check</a></li>
+												<li><a href="ourassets.html#din" data-target="2">Data Integrity</a></li>
+												<li><a href="ourassets.html#dag" data-target="3">Device Agnosticism</a></li>
+												<li><a href="ourassets.html#ast" data-target="4">Assistance</a></li>
+											</ul>
+											</div>
+                                    </div>
+									<div class="col-xl-3 col-12 col-md-3">
+											<div class="footer_widget">
+                                            <h3 class="footer_heading">
+                                                Consult Us
+                                            </h3>
+											<ul class="quick_links">
+												<li><a href="demosetup.html">Demo survey link</a></li>
+												<li><a href="mailto:consult@beesphere.com" id="consultus"><i class="fas fa-envelope"></i> consult@beesphere.com</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+					    <div class="col-xl-1 col-12 col-md-1"></div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer_end -->
+    <script>
+      $('input').change(function() {
+  var $el = $(this);
+  
+  if ($el.attr('id') == 'none' && $el.prop('checked')) {
+    $('input').not($el).prop('checked', false);
+  } else {
+    $('#none').prop('checked', false);  
+  }
+});
+
+    </script>
+</body>
+</html>
