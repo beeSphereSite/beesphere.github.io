@@ -68,6 +68,7 @@ overflow: hidden;
 	padding: 50px 50px 50px 10px; 
 	overflow: hidden;
 	float:right;
+	
 }
 
 .inner img {
@@ -76,11 +77,28 @@ overflow: hidden;
 	margin-top: 15%;
 }
 
+
+.kwicks .inner h2{
+	font-size: 30px;
+	text-shadow: 1px 1px black;
+	
+	}
+	
+	.kwicks .inner p{
+	font-size: 18px;
+	text-shadow: 0.75px 0.75px black;
+	}
+
+@media (max-width: 991px) {
+
 .kwicks .inner h2{
 font-size: 18px;
+text-shadow: 1px 1px black;
+
 }
 
 .kwicks .inner p{
 font-size: 12px;
+text-shadow: 0.75px 0.75px black;
 }
-
+}
