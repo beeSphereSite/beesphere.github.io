@@ -74,6 +74,7 @@ overflow: hidden;
 li .inner .ourassetsimg img {
 	max-width: 100%;
 	height: auto !important;
+	position: absolute;
 }
 
 
