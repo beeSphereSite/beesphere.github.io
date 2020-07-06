@@ -71,10 +71,8 @@ overflow: hidden;
 	
 }
 
-.inner img {
-
+li .inner .ourassetsimg img {
 	max-width: 100%;
-	margin-top: 15%;
 	height: auto !important;
 }
 
