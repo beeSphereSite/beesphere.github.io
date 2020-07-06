@@ -75,6 +75,7 @@ overflow: hidden;
 
 	max-width: 100%;
 	margin-top: 15%;
+	height: auto !important;
 }
 
 
@@ -86,7 +87,7 @@ overflow: hidden;
 	
 	.kwicks .inner p{
 	font-size: 18px;
-	text-shadow: 0.75px 0.75px black;
+	text-shadow: 1px 1px black;
 	}
 
 @media (max-width: 991px) {
@@ -96,9 +97,12 @@ font-size: 18px;
 text-shadow: 1px 1px black;
 
 }
-
+.assets li {
+	float: left;
+	height: 350px;
+}
 .kwicks .inner p{
 font-size: 12px;
-text-shadow: 0.75px 0.75px black;
+text-shadow: 1px 1px black;
 }
 }
