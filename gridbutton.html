@@ -121,6 +121,50 @@ font-weight: bold;
   margin-top: 35px;
 }
 
+table td {
+width: 170px;
+
+}
+
+@media 
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+	/* Force table to not be like tables anymore */
+	table, th, td, tr { 
+		display: block; 
+	}
+
+  td { 
+		position: absolute;
+		top: 0px;
+		left: 0px;
+	}
+
+  td { 
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		padding-left: 50%; 
+    width: 200px;
+	}
+  td:before { 
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		 
+		padding-right: 10px; 
+		white-space: nowrap;
+	}
+
+  
+
+
+}
+
    </style> 
 
    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"/>
@@ -174,18 +218,20 @@ jQuery(document).ready(
         <div class="col-md-12 col-sm-12 col-12 mt">
           <label for="Q1"><h2>How are you satisfied with each of the following Social media apps?</h2></label>
           <p>Select one button per row</p>
-          <div class="table-responsive-md">
+          
     <table class="table">
 
     
     <tr>
-    
+      <div class="col-sm col-md">
       <th scope="row">Facebook</th>
+      
       <td><input type="radio" name="1" id="v" value="1v"><label for="v" style="width:170px;text-align: center;"><span class="cont">Extremely satisfied</span></label></td>
       <td><input type="radio" name="1" id="w" value="1w"><label for="w" style="width:170px;height:60px;line-height:60px;text-align: center;"><span class="cont">Satisfied</span></label></td>
       <td><input type="radio" name="1" id="x" value="1x"><label for="x" style="width:170px;height:60px;line-height:60px;text-align: center;"><span class="cont">Neutral</span></label></td>
       <td><input type="radio" name="1" id="y" value="1y"><label for="y" style="width:170px;height:60px;line-height:60px;text-align: center;"><span class="cont">Dissatisfied</span></label></td>
       <td><input type="radio" name="1" id="z" value="1z"><label for="z" style="width:170px;text-align: center;"><span class="cont">Extremely dissatisfied</span></label></td>
+      </div>
     </tr>
                                                                 
     <tr>   
@@ -225,14 +271,14 @@ jQuery(document).ready(
       <td><input type="radio" name="5" id="z4" value="1z"><label for="z4" style="width:170px;text-align: center;"><span class="cont">Extremely dissatisfied</span></label></td>
     </tr>
 </table>
-</div>        
+        
         </div>
       </div>
       <div class="row">
         <div class="col-md-11 col-sm-12 col-12 mt">
 <label for="Q2"><h2>When do you perform the following activities?</h2></label>
 <p>Select all buttons that apply</p>
-<div class="table-responsive-md">
+
 <table class="table">
     <tr>
       <th scope="row">Reading</th>
@@ -267,7 +313,7 @@ jQuery(document).ready(
       
     </tr>                                                                 
 </table>
-</div>
+
 </div>
 </div>
       
